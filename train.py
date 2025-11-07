@@ -29,8 +29,9 @@ print("torch==%s" % torch.version.git_version)
 print("matplotlib==%s" % json.loads(matplotlib._version.version_json)['full-revisionid'])
 
 seed = 42
-device = utils.DEVICE
-torch.cuda.empty_cache()
+device = torch.device('cpu')
+#device = utils.DEVICE
+#torch.cuda.empty_cache()
 
 if __name__ == '__main__':
     # set random seed to 0
